@@ -1,2 +1,6 @@
-# Remote-method-invoker
-Python client-server demo of Remote Method Invocation Distributed Systems. A client sends a student's name and marks as JSON over TCP; the server calculates total, average and grade, plus pass/fail status and unit-name lookup, and returns the result. Includes error handling and a dispatch-table design. No external dependencies.
+#Remote Method Invoker
+A client-server application in Python that demonstrates Remote Method Invocation. The client sends a student's marks to a server, and the server performs the calculation and returns the result. The client contains no grading logic.
+
+How it works
+
+The client builds a JSON request containing a method name and its arguments and sends it over TCP (port 5000). The server looks the method up in a dispatch table, runs it, and returns a JSON response.
